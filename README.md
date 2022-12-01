@@ -1,5 +1,5 @@
-# powershell-profile
-Pretty PowerShell that looks good and functions almost as good as Linux terminal 
+# Windows
+Windows configs
 
 ## One Line Install (Elevated PowerShell Recommended)
 
@@ -7,6 +7,6 @@ Pretty PowerShell that looks good and functions almost as good as Linux terminal
 irm "https://github.com/Meyu-Sys/dotties/raw/main/Windows/setup.ps1" | iex
 ```
 
-## Fix the Missing Font
+## Sources
 
-extract the downloaded `cove.zip` that is in the folder you ran the script from and install the nerd fonts. 
+Powershell profile and win install - https://github.com/ChrisTitusTech/powershell-profile
