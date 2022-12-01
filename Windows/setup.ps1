@@ -28,20 +28,17 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
  }
 & $profile
 
-# Font Install
-# You will have to extract and Install this font manually, alternatively use the oh my posh font installer (Must be run as admin)
-# oh-my-posh font install
-# You will also need to set your Nerd Font of choice in your window defaults or in the Windows Terminal Settings.
-Invoke-RestMethod https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip?WT.mc_id=-blog-scottha -o cove.zip
+# Winget Install
+Invoke-RestMethod  "https://github.com/asheroto/winget-installer/raw/master/winget-install.ps1" | Invoke-Expression
 
-# Choco install
-#
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+# Choco Install
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+# Windows Terminal Install
+winget install Microsoft.WindowsTerminal.Preview
 
 # Starship install
-#
 choco install starship
 
 # Terminal Icons Install
-#
 Install-Module -Name Terminal-Icons -Repository PSGallery
