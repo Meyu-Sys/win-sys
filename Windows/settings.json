@@ -39,10 +39,10 @@
             "colorScheme": "Snazzy",
             "font": 
             {
-                "face": "JetBrainsMono Nerd Font Mono",
+                "face": "FiraCode Nerd Font",
                 "size": 13
             },
-            "opacity": 95,
+            "opacity": 93,
             "suppressApplicationTitle": true,
             "useAcrylic": true
         },
