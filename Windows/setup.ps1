@@ -37,6 +37,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 # Windows Terminal Install
 winget install Microsoft.WindowsTerminal.Preview
 
+# Terminal Config
+ 
+ # Defining variable for terminal config
+$term = "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState"
 # Starship install
 choco install starship
 
