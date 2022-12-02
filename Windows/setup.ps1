@@ -46,6 +46,9 @@ else {
     Write-Host "The settings.json @ [$term] has been created and old profile removed."    
 }
 
+# Font install
+choco install nerd-fonts-firacode
+
 # Starship install
 choco install starship
 
