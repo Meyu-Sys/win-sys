@@ -1,16 +1,8 @@
 #If the file does not exist, create it.
 if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
     try {
-        # Detect Version of Powershell & Create Profile directories if they do not exist.
-        if ($PSVersionTable.PSEdition -eq "Core" ) { 
-            if (!(Test-Path -Path ($env:userprofile + "\Documents\Powershell"))) {
-                New-Item -Path ($env:userprofile + "\Documents\Powershell") -ItemType "directory"
-            }
-        }
-        elseif ($PSVersionTable.PSEdition -eq "Desktop") {
             if (!(Test-Path -Path ($env:userprofile + "\Documents\WindowsPowerShell"))) {
                 New-Item -Path ($env:userprofile + "\Documents\WindowsPowerShell") -ItemType "directory"
-            }
         }
 
         Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/Microsoft.PowerShell_profile.ps1 -o $PROFILE
@@ -42,12 +34,12 @@ winget install Microsoft.WindowsTerminal.Preview
  # Variable for terminal config
 $term = "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json"
 
-# if settings.json doesn't exists
+ # if settings.json doesn't exists
 if (!(Test-Path -Path $term -PathType Leaf)) {
     Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/settings.json -o $term
         Write-Host "The settings.json @ [$term] has been created."
 }
-# If settings.json already exists
+ # If settings.json already exists
 else {
     Get-Item -Path $term | Move-Item -Destination oldsettings.json
     Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/settings.json -o $term
