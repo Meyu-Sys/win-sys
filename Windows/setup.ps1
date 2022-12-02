@@ -39,8 +39,21 @@ winget install Microsoft.WindowsTerminal.Preview
 
 # Terminal Config
  
- # Defining variable for terminal config
-$term = "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState"
+ # Variable for terminal config
+$term = "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json"
+
+# if settings.json doesn't exists
+if (!(Test-Path -Path $term -PathType Leaf)) {
+    Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/settings.json -o $term
+        Write-Host "The settings.json @ [$term] has been created."
+}
+# If settings.json already exists
+else {
+    Get-Item -Path $term | Move-Item -Destination oldsettings.json
+    Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/settings.json -o $term
+    Write-Host "The settings.json @ [$term] has been created and old profile removed."    
+}
+
 # Starship install
 choco install starship
 
