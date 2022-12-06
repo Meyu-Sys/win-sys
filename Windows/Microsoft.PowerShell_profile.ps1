@@ -3,7 +3,7 @@
 # From https://gist.github.com/timsneath/19867b12eee7fd5af2ba
 
 # Import Terminal Icons
-#Import-Module -Name Terminal-Icons
+Import-Module -Name Terminal-Icons
 
 # Find out if the current user identity is elevated (has admin rights)
 $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
