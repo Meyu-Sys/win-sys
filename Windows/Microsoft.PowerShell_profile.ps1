@@ -1,3 +1,4 @@
+# TODO Figure out System.Threading error
 #PowerShell template profile 
 # Version 1.03 - Tim Sneath <tim@sneath.org>
 # From https://gist.github.com/timsneath/19867b12eee7fd5af2ba
@@ -10,6 +11,7 @@ $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
 $principal = New-Object Security.Principal.WindowsPrincipal $identity
 $isAdmin = $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 
+# TODO Seperate aliases and functions in a seperate file
 # If so and the current host is a command line, then change to red color 
 # as warning to user that they are operating in an elevated context
 # Useful shortcuts for traversing directories
