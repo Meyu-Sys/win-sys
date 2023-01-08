@@ -5,7 +5,7 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
                 New-Item -Path ($env:userprofile + "\Documents\WindowsPowerShell") -ItemType "directory"
         }
 
-        Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/Microsoft.PowerShell_profile.ps1 -o $PROFILE
+        Invoke-RestMethod https://github.com/Meyu-Sys/win-sys/raw/main/Microsoft.PowerShell_profile.ps1 -o $PROFILE
         Write-Host "The profile @ [$PROFILE] has been created."
     }
     catch {
@@ -15,7 +15,7 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
 # If the file already exists, show the message and do nothing.
  else {
 		 Get-Item -Path $PROFILE | Move-Item -Destination oldprofile.ps1
-		 Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/Microsoft.PowerShell_profile.ps1 -o $PROFILE
+		 Invoke-RestMethod https://github.com/Meyu-Sys/win-sys/raw/main/Microsoft.PowerShell_profile.ps1 -o $PROFILE
 		 Write-Host "The profile @ [$PROFILE] has been created and old profile removed."
  }
 & $profile
@@ -36,13 +36,13 @@ $term = "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminalPrevie
 
  # if settings.json doesn't exists
 if (!(Test-Path -Path $term -PathType Leaf)) {
-    Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/settings.json -o $term
+    Invoke-RestMethod https://github.com/Meyu-Sys/win-sys/raw/main/settings.json -o $term
         Write-Host "The settings.json @ [$term] has been created."
 }
  # If settings.json already exists
 else {
     Get-Item -Path $term | Move-Item -Destination oldsettings.json
-    Invoke-RestMethod https://github.com/Meyu-Sys/dotties/raw/main/Windows/settings.json -o $term
+    Invoke-RestMethod https://github.com/Meyu-Sys/win-sys/raw/main/settings.json -o $term
     Write-Host "The settings.json @ [$term] has been created and old profile removed."    
 }
 
