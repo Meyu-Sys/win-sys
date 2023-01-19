@@ -20,6 +20,9 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
  }
 & $profile
 
+# terminal icons Module
+Install-Module -Name Terminal-Icons -Repository PSGallery
+
 # Winget Install
 Invoke-RestMethod  "https://github.com/asheroto/winget-installer/raw/master/winget-install.ps1" | Invoke-Expression
 
