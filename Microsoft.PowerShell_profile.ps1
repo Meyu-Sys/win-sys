@@ -1,7 +1,17 @@
-# TODO Figure out System.Threading error
-#PowerShell template profile 
-# Version 1.03 - Tim Sneath <tim@sneath.org>
-# From https://gist.github.com/timsneath/19867b12eee7fd5af2ba
+### PowerShell template profile 
+### Version 1.03 - Tim Sneath <tim@sneath.org>
+### From https://gist.github.com/timsneath/19867b12eee7fd5af2ba
+###
+### This file should be stored in $PROFILE.CurrentUserAllHosts
+### If $PROFILE.CurrentUserAllHosts doesn't exist, you can make one with the following:
+###    PS> New-Item $PROFILE.CurrentUserAllHosts -ItemType File -Force
+### This will create the file and the containing subdirectory if it doesn't already 
+###
+### As a reminder, to enable unsigned script execution of local scripts on client Windows, 
+### you need to run this line (or similar) from an elevated PowerShell prompt:
+###   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+### This is the default policy on Windows Server 2012 R2 and above for server Windows. For 
+### more information about execution policies, run Get-Help about_Execution_Policies.
 
 # Import Terminal Icons
 Import-Module -Name Terminal-Icons
@@ -11,7 +21,6 @@ $identity = [Security.Principal.WindowsIdentity]::GetCurrent()
 $principal = New-Object Security.Principal.WindowsPrincipal $identity
 $isAdmin = $principal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 
-# TODO Seperate aliases and functions in a seperate file
 # If so and the current host is a command line, then change to red color 
 # as warning to user that they are operating in an elevated context
 # Useful shortcuts for traversing directories
@@ -179,6 +188,9 @@ function pkill($name) {
 function pgrep($name) {
     Get-Process $name
 }
+
+# Oh-MyPosh
+oh-my-posh init pwsh --config '~/.config/jandedobbeleer.omp.json' | Invoke-Expression
 # Import the Chocolatey Profile that contains the necessary code to enable
 # tab-completions to function for `choco`.
 # Be aware that if you are missing these lines from your profile, tab completion
@@ -188,4 +200,3 @@ $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
     Import-Module "$ChocolateyProfile"
 }
-Invoke-Expression (&starship init powershell)

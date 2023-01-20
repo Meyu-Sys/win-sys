@@ -20,6 +20,9 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
  }
 & $profile
 
+# Import omp config
+Invoke-RestMethod https://github.com/Meyu-Sys/win-sys/raw/main/jandedobbeleer.omp.json -o $env:userprofile
+
 # terminal icons Module
 Install-Module -Name Terminal-Icons -Repository PSGallery
 
@@ -52,8 +55,8 @@ else {
 # Font install
 choco install nerd-fonts-firacode
 
-# Starship install
-choco install starship
+# Oh-My-Posh install
+winget install -e --accept-source-agreements --accept-package-agreements JanDeDobbeleer.OhMyPo
 
 # Terminal Icons Install
 Install-Module -Name Terminal-Icons -Repository PSGallery
