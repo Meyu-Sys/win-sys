@@ -21,7 +21,9 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
 & $profile
 
 # Import omp config
-Invoke-RestMethod https://github.com/Meyu-Sys/win-sys/raw/main/jandedobbeleer.omp.json -o $env:userprofile
+$config = $env:userprofile + "\.config"
+New-Item -ItemType Directory -Path $config
+(New-Object System.Net.WebClient).DownloadFile(https://github.com/Meyu-Sys/win-sys/raw/main/jandedobbeleer.omp.json, $config)
 
 # terminal icons Module
 Install-Module -Name Terminal-Icons -Repository PSGallery
@@ -56,7 +58,7 @@ else {
 choco install nerd-fonts-firacode
 
 # Oh-My-Posh install
-winget install -e --accept-source-agreements --accept-package-agreements JanDeDobbeleer.OhMyPo
+winget install -e --accept-source-agreements --accept-package-agreements JanDeDobbeleer.OhMyPosh
 
 # Terminal Icons Install
 Install-Module -Name Terminal-Icons -Repository PSGallery
