@@ -23,7 +23,7 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
 # Import omp config
 $config = $env:userprofile + "\.config"
 New-Item -ItemType Directory -Path $config
-(New-Object System.Net.WebClient).DownloadFile((https://github.com/Meyu-Sys/win-sys/raw/main/jandedobbeleer.omp.json), $config)
+(New-Object System.Net.WebClient).DownloadFile("https://github.com/Meyu-Sys/win-sys/raw/main/jandedobbeleer.omp.json", $config)
 
 # terminal icons Module
 Install-Module -Name Terminal-Icons -Repository PSGallery
