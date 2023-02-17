@@ -1,3 +1,6 @@
+# Install Apps
+winget install --accept-source-agreements --accept-package-agreements BlenderFoundation.Blender Brave.Brave Bitwarden.Bitwarden chrisant996.Clink Starship.Starship JanDeDobbeleer.OhMyPosh Microsoft.WindowsTerminal.Preview
+
 #If the file does not exist, create it.
 if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
     try {
@@ -20,10 +23,8 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
  }
 & $profile
 
-# Import omp config
-$config = $env:userprofile + "\.config"
-New-Item -ItemType Directory -Path $config
-(New-Object System.Net.WebClient).DownloadFile("https://github.com/Meyu-Sys/win-sys/raw/main/jandedobbeleer.omp.json", $config)
+# Import configs
+Move-Item .\.config $env:userprofile
 
 # terminal icons Module
 Install-Module -Name Terminal-Icons -Repository PSGallery
@@ -33,9 +34,6 @@ Invoke-RestMethod  "https://github.com/asheroto/winget-installer/raw/master/wing
 
 # Choco Install
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
-# Windows Terminal Install
-winget install Microsoft.WindowsTerminal.Preview
 
 # Terminal Config
  
@@ -56,9 +54,6 @@ else {
 
 # Font install
 choco install nerd-fonts-firacode
-
-# Oh-My-Posh install
-winget install -e --accept-source-agreements --accept-package-agreements JanDeDobbeleer.OhMyPosh
 
 # Terminal Icons Install
 Install-Module -Name Terminal-Icons -Repository PSGallery

@@ -1,0 +1,94 @@
+version: "3.7"
+
+services:
+  sonarr:
+    container_name: sonarr
+    image: cr.hotio.dev/hotio/sonarr
+    ports:
+      - "8989:8989"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Asia/Kolkata
+    volumes:
+      - C:/Users/Meyu/.config/sonarr:/config
+      - C:/Media/Shows:/tv
+      - C:/Torrents:/downloads
+  radarr:
+    container_name: radarr
+    image: cr.hotio.dev/hotio/radarr
+    ports:
+      - "7878:7878"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Asia/Kolkata
+    volumes:
+      - C:/Users/Meyu/.config/radarr:/config
+      - C:/Media/Movies:/movies
+      - C:/Torrents:/downloads
+  bazarr:
+    container_name: bazarr
+    image: cr.hotio.dev/hotio/bazarr
+    ports:
+      - "6767:6767"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Asia/Kolkata
+    volumes:
+      - C:/Users/Meyu/.config/bazarr:/config
+      - C:/Media/Movies:/movies
+      - C:/Media/Shows:/tv
+  prowlarr:
+    container_name: prowlarr
+    image: cr.hotio.dev/hotio/prowlarr
+    ports:
+      - "9696:9696"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Asia/Kolkata
+    volumes:
+      - C:/Users/Meyu/.config/prowlarr:/config
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    volumes:
+      - C:/Users/Meyu/.config/jellyfin/config:/config
+      - C:/Users/Meyu/.config/jellyfin/cache:/cache
+      - C:/Media:/media
+    ports:
+      - 8096:8096
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - C:/Users/Meyu/.config/deluge:/config
+      - C:/Torrents:/downloads
+    ports:
+      - 8112:8112
+      - 6881:6881
+      - 6881:6881/udp
+  lidarr:
+    image: lscr.io/linuxserver/lidarr:latest
+    container_name: lidarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - C:/Users/Meyu/.config/lidarr:/config
+      - C:/Media/Music:/music #optional
+      - C:/Torrents:/downloads #optional
+    ports:
+      - 8686:8686

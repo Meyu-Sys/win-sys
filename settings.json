@@ -31,7 +31,13 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "defaultProfile": "{48a4bee7-05c1-43ba-8ff1-d507ee85affb}",
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
     "profiles": 
     {
         "defaults": 
@@ -40,7 +46,7 @@
             "font": 
             {
                 "face": "FiraCode Nerd Font",
-                "size": 13
+                "size": 13.0
             },
             "opacity": 93,
             "suppressApplicationTitle": true,
@@ -65,6 +71,14 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "commandline": "%LOCALAPPDATA%\\Microsoft\\WindowsApps\\fedoraremix.exe",
+                "guid": "{48a4bee7-05c1-43ba-8ff1-d507ee85affb}",
+                "hidden": false,
+                "icon": "%LOCALAPPDATA%\\Packages\\WhitewaterFoundryLtd.Co.FedoraRemixforWSLSL_zxdhfybd17krt\\LocalState\\fedoraremix.png",
+                "name": "Fedora",
+                "startingDirectory": "~"
             }
         ]
     },
@@ -138,6 +152,29 @@
             "selectionBackground": "#44475A",
             "white": "#BBBBBB",
             "yellow": "#F1FA8C"
+        },
+        {
+            "background": "#1E1E1E",
+            "black": "#171421",
+            "blue": "#12488B",
+            "brightBlack": "#5E5C64",
+            "brightBlue": "#2A7BDE",
+            "brightCyan": "#33C7DE",
+            "brightGreen": "#33DA7A",
+            "brightPurple": "#C061CB",
+            "brightRed": "#F66151",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#E9AD0C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#2AA1B3",
+            "foreground": "#E8E8E8",
+            "green": "#26A269",
+            "name": "Fedora Remix for WSL",
+            "purple": "#A347BA",
+            "red": "#C01C28",
+            "selectionBackground": "#FFFFFF",
+            "white": "#D0CFCC",
+            "yellow": "#A2734C"
         },
         {
             "background": "#282C34",
@@ -394,5 +431,6 @@
         }
     ],
     "theme": "dark",
+    "themes": [],
     "useAcrylicInTabRow": true
 }
