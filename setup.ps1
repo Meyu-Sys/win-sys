@@ -1,6 +1,3 @@
-# Install Apps
-winget install --accept-source-agreements --accept-package-agreements BlenderFoundation.Blender Brave.Brave Bitwarden.Bitwarden chrisant996.Clink Starship.Starship JanDeDobbeleer.OhMyPosh Microsoft.WindowsTerminal.Preview
-
 #If the file does not exist, create it.
 if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
     try {
@@ -29,8 +26,17 @@ Move-Item .\.config $env:userprofile
 # terminal icons Module
 Install-Module -Name Terminal-Icons -Repository PSGallery
 
+# wsl install
+wsl --install
+
 # Winget Install
 Invoke-RestMethod  "https://github.com/asheroto/winget-installer/raw/master/winget-install.ps1" | Invoke-Expression
+
+# App install
+winget import --accept-source-agreements --accept-package-agreement -i .\winget-export.json
+
+# Uninstall ubuntu
+wsl --unregister Ubuntu
 
 # Choco Install
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))

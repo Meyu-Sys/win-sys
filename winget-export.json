@@ -1,0 +1,224 @@
+{
+	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
+	"CreationDate" : "2023-02-25T13:25:29.197-00:00",
+	"Sources" : 
+	[
+		{
+			"Packages" : 
+			[
+				{
+					"PackageIdentifier" : "Bitwarden.Bitwarden"
+				},
+				{
+					"PackageIdentifier" : "Starship.Starship"
+				},
+				{
+					"PackageIdentifier" : "agalwood.Motrix"
+				},
+				{
+					"PackageIdentifier" : "7zip.7zip"
+				},
+				{
+					"PackageIdentifier" : "ShareX.ShareX"
+				},
+				{
+					"PackageIdentifier" : "Brave.Brave"
+				},
+				{
+					"PackageIdentifier" : "CPUID.CPU-Z"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
+				},
+				{
+					"PackageIdentifier" : "FilesCommunity.Files"
+				},
+				{
+					"PackageIdentifier" : "GIMP.GIMP"
+				},
+				{
+					"PackageIdentifier" : "GitHub.GitHubDesktop"
+				},
+				{
+					"PackageIdentifier" : "Git.Git"
+				},
+				{
+					"PackageIdentifier" : "CodecGuide.K-LiteCodecPack.Standard"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsTerminal.Preview"
+				},
+				{
+					"PackageIdentifier" : "OBSProject.OBSStudio"
+				},
+				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
+				},
+				{
+					"PackageIdentifier" : "ProtonTechnologies.ProtonVPN"
+				},
+				{
+					"PackageIdentifier" : "Spotify.Spotify"
+				},
+				{
+					"PackageIdentifier" : "Spicetify.Spicetify"
+				},
+				{
+					"PackageIdentifier" : "Valve.Steam"
+				},
+				{
+					"PackageIdentifier" : "whitewaterfoundry.fedora-remix-for-wsl"
+				},
+				{
+					"PackageIdentifier" : "WinDirStat.WinDirStat"
+				},
+				{
+					"PackageIdentifier" : "WiresharkFoundation.Wireshark"
+				},
+				{
+					"PackageIdentifier" : "Zoom.Zoom"
+				},
+				{
+					"PackageIdentifier" : "OliverSchwendener.ueli"
+				},
+				{
+					"PackageIdentifier" : "chrisant996.Clink"
+				},
+				{
+					"PackageIdentifier" : "Balena.Etcher"
+				},
+				{
+					"PackageIdentifier" : "Notion.Notion"
+				},
+				{
+					"PackageIdentifier" : "qBittorrent.qBittorrent"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsInstallationAssistant"
+				},
+				{
+					"PackageIdentifier" : "EclipseAdoptium.Temurin.17.JDK"
+				},
+				{
+					"PackageIdentifier" : "OpenJS.NodeJS"
+				},
+				{
+					"PackageIdentifier" : "Oracle.JavaRuntimeEnvironment"
+				},
+				{
+					"PackageIdentifier" : "voidtools.Everything"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.XNARedist"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.PowerToys"
+				},
+				{
+					"PackageIdentifier" : "ShiningLight.OpenSSL"
+				},
+				{
+					"PackageIdentifier" : "BlenderFoundation.Blender"
+				},
+				{
+					"PackageIdentifier" : "OpenVPNTechnologies.OpenVPNConnect"
+				},
+				{
+					"PackageIdentifier" : "ElectronicArts.EADesktop"
+				},
+				{
+					"PackageIdentifier" : "Telegram.TelegramDesktop"
+				},
+				{
+					"PackageIdentifier" : "DuongDieuPhap.ImageGlass"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VisualStudioCode"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.Runtime.3_1"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.WindowsPCHealthCheck"
+				},
+				{
+					"PackageIdentifier" : "TechPowerUp.GPU-Z"
+				},
+				{
+					"PackageIdentifier" : "VMware.WorkstationPro"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.DotNet.DesktopRuntime.6"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2008.x86"
+				},
+				{
+					"PackageIdentifier" : "ViGEm.ViGEmBus"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
+				},
+				{
+					"PackageIdentifier" : "RevoUninstaller.RevoUninstaller"
+				},
+				{
+					"PackageIdentifier" : "Sejda.PDFDesktop"
+				},
+				{
+					"PackageIdentifier" : "Nilesoft.Shell"
+				},
+				{
+					"PackageIdentifier" : "VideoLAN.VLC"
+				},
+				{
+					"PackageIdentifier" : "Nvidia.GeForceExperience"
+				},
+				{
+					"PackageIdentifier" : "dorssel.usbipd-win"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
+				},
+				{
+					"PackageIdentifier" : "Oracle.JDK.18"
+				},
+				{
+					"PackageIdentifier" : "EpicGames.EpicGamesLauncher"
+				},
+				{
+					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x64"
+				},
+				{
+					"PackageIdentifier" : "Python.Python.3.10"
+				},
+				{
+					"PackageIdentifier" : "Python.Python.3.11"
+				}
+			],
+			"SourceDetails" : 
+			{
+				"Argument" : "https://cdn.winget.microsoft.com/cache",
+				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
+				"Name" : "winget",
+				"Type" : "Microsoft.PreIndexed.Package"
+			}
+		}
+	],
+	"WinGetVersion" : "1.4.10173"
+}
