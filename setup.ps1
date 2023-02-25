@@ -33,10 +33,13 @@ wsl --install
 Invoke-RestMethod  "https://github.com/asheroto/winget-installer/raw/master/winget-install.ps1" | Invoke-Expression
 
 # App install
-winget import --accept-source-agreements --accept-package-agreement -i .\winget-export.json
+winget import --accept-source-agreements --accept-package-agreements -i .\winget-export.json
 
 # Uninstall ubuntu
 wsl --unregister Ubuntu
+
+# Clink
+Invoke-RestMethod https://github.com/Meyu-Sys/win-sys/raw/main/starship.lua -o %LocalAppData%\clink\
 
 # Choco Install
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
