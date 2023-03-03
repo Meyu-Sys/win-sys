@@ -148,6 +148,9 @@
 					"PackageIdentifier" : "Microsoft.VCRedist.2008.x64"
 				},
 				{
+					"PackageIdentifier" : "Libretro.RetroArch"
+				},
+				{
 					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
 				},
 				{
