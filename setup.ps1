@@ -23,9 +23,6 @@ if (!(Test-Path -Path $PROFILE -PathType Leaf)) {
 # Import configs
 Move-Item .\.config $env:userprofile
 
-# terminal icons Module
-Install-Module -Name Terminal-Icons -Repository PSGallery
-
 # wsl install
 wsl --install
 
